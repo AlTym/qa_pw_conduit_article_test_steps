@@ -17,7 +17,7 @@ export class CreateArticlePage {
   }
 
   async clickPublishArticleButton() {
-    await test.step(`Click the 'Publish Article' button`, async () => {
+    await test.step(`Click Publish Article`, async () => {
       await this.publishArticleButton.click();
     });
   }
@@ -29,25 +29,25 @@ export class CreateArticlePage {
   }
 
   async fillTitleInputField(messageText) {
-    await test.step(`fill Title Input Field`, async () => {
+    await test.step(`Fill article title`, async () => {
       await this.articleTitleInputField.fill(messageText);
     });
   }
 
   async fillDescriptionField(messageText) {
-    await test.step(`fill Description Input Field`, async () => {
+    await test.step(`Fill article description`, async () => {
       await this.articleDescriptionInputField.fill(messageText);
     });
   }
 
   async fillBodyField(messageText) {
-    await test.step(`fill Body Input Field`, async () => {
+    await test.step(`Fill article body`, async () => {
       await this.articleBodyInputField.fill(messageText);
     });
   }
 
   async fillTagsField(messageText) {
-    await test.step(`fill Tags Input Field`, async () => {
+    await test.step(`Fill article tags`, async () => {
       await this.articleTagsInputField.fill(messageText);
       await this.page.keyboard.press('Enter');
     });
