@@ -52,4 +52,10 @@ export class CreateArticlePage {
       await this.page.keyboard.press('Enter');
     });
   }
+
+  async assertErrorMessageIsEmpty() {
+    await test.step(`Assert is no error message`, async () => {
+      await expect(this.errorMessage).toBeEmpty();
+    });
+  }
 }

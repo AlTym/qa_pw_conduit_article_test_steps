@@ -26,7 +26,7 @@ test.beforeEach(async ({ page }) => {
   await homePage.assertYourFeedTabIsVisible();
 });
 
-test('create an article with required and optional fields', async () => {
+test('create an article without article tag', async () => {
 
   const article = {
     title: `${faker.lorem.word()}`,
@@ -41,8 +41,5 @@ test('create an article with required and optional fields', async () => {
   await createArticlePage.fillBodyField(article.body);
 
   await createArticlePage.clickPublishArticleButton();
-  await createArticlePage.clickPublishArticleButton();
-  await createArticlePage.assertErrorMessageContainsText(
-    '',
-  );
+  await createArticlePage.assertErrorMessageIsEmpty();
 });

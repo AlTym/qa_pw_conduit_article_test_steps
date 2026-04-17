@@ -42,7 +42,5 @@ test('create an article with required and optional fields', async () => {
   await createArticlePage.fillTagsField(article.tags);
 
   await createArticlePage.clickPublishArticleButton();
-  await createArticlePage.assertErrorMessageContainsText(
-    '',
-  );
+  await createArticlePage.assertErrorMessageIsEmpty();
 });
